@@ -1,0 +1,686 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Junjie Tang&#x27;s Personal Website</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="92d8188e-c7ac-4dd0-9774-daf243fdb8ad" class="page sans"><header><img class="page-cover-image" src="Junjie%20Tang&#x27;s%20Personal%20Website%2092d8188ec7ac4dd09774daf243fdb8ad/v2-a9af36d75e27c7210777af43b9a2643a_r.jpg" style="object-position:center 90.48%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://www.notion.so/icons/user_gray.svg"/></div><h1 class="page-title"><strong>Junjie Tang&#x27;s </strong>Personal Website</h1><p class="page-description"></p></header><div class="page-body"><p id="b9c42979-90ca-49d3-b3c1-d92924c3ef09" class="">
+</p><p id="d76332f8-d02a-49db-9abc-2da41817a39b" class="">
+</p><div id="64bbca38-e52f-497a-9dca-d31bf266de7a" class="column-list"><div id="865ac75d-93b6-444e-9f45-e738c491a560" style="width:50%" class="column"><figure class="block-color-orange_background callout" style="white-space:pre-wrap;display:flex" id="e2d429b4-4cf3-4cd9-808f-12eb179128e2"><div style="font-size:1.5em"><span class="icon">⚙</span></div><div style="width:100%"><strong>Hello! I&#x27;m Junjie Tang, a humble researcher in the field of AI-assisted Drug Development (AIDD).</strong> I am dedicated to developing an interdisciplinary research paradigm that fuses artificial intelligence and computational biology with drug design. Addressing the issues present in computer-aided drug design and the development of traditional Chinese medicine, I incorporate the latest technologies from multiple disciplines, including artificial intelligence, cheminformatics, bioinformatics, and biophysics. Through iterative experimentation, I aim to develop high-precision drug design methodologies.</div></figure></div><div id="5bf72430-5e78-4971-ba14-ad433fd7171f" style="width:50%" class="column"><figure id="5ee93ba7-9423-476f-a924-bbb5880d488a" class="image"><a href="Junjie%20Tang&#x27;s%20Personal%20Website%2092d8188ec7ac4dd09774daf243fdb8ad/909f1f54-cb3a-40a4-81f7-01cf796caa50.png"><img style="width:220.08253094910592px" src="Junjie%20Tang&#x27;s%20Personal%20Website%2092d8188ec7ac4dd09774daf243fdb8ad/909f1f54-cb3a-40a4-81f7-01cf796caa50.png"/></a></figure></div></div><p id="46326192-47af-4f2a-904c-2ad0b1ab7fe0" class="">
+</p><p id="eed83b30-3e7c-4d6a-a6d7-44e6ae9093c7" class="">
+</p><h1 id="f5d76bcf-b8df-417b-bcae-167bb6eb1fc0" class="">💼 Work Experience</h1><h3 id="d5a483dc-4be5-4508-a0ee-7b36d4864411" class="">SPH Central Research Center - Shanghai, China | Jul 2022 - Aug 2022</h3><ul id="4126d27b-d1e1-4496-a5b1-e17b0ace0179" class="bulleted-list"><li style="list-style-type:disc">Institute of Chinese Material Medica (Internship)</li></ul><ul id="ab22565d-4fcd-4ac2-9d89-9e1ccf225bef" class="bulleted-list"><li style="list-style-type:disc">Conducted network pharmacological analysis and molecular docking.</li></ul><p id="385f1557-b0f4-4303-8bfa-e0339101145d" class="">
+</p><h1 id="84be8e0b-a27a-41f8-8a4d-9b85d4f55d9b" class="">🧠 <strong>Research &amp; Project Experience</strong></h1><h3 id="f31a64f6-b6a9-4d3e-a511-12f0dc54e531" class="">The construction and application of a prediction model for drug-induced liver injury | Jul 2023 - Jun 2024</h3><ul id="44f279fa-4a47-4689-be46-03833c245cec" class="bulleted-list"><li style="list-style-type:disc">Constructed a high-precision prediction model using Deep Learning.</li></ul><ul id="aa6fc647-82b7-497e-b967-d231f95d5d0c" class="bulleted-list"><li style="list-style-type:disc">Optimized model parameters to enhance prediction accuracy.</li></ul><ul id="bf613f71-7167-4823-9ccd-e16ecd92e710" class="bulleted-list"><li style="list-style-type:disc">Validated model effectiveness through cytotoxicity experiments.</li></ul><h3 id="f000066c-a951-4e9f-b5d9-29aebad58de5" class="">The construction and application of efficient R&amp;D system for CYP3A4 inhibitors | Mar 2023 - Mar 2024</h3><ul id="acde3d82-e9f6-4e55-a510-5930c723c1cd" class="bulleted-list"><li style="list-style-type:disc">Developed a method for discovering CYP3A4 inhibitors using Deep Learning.</li></ul><ul id="d4dbb9e7-719b-4452-9ff9-e2fa334f41a1" class="bulleted-list"><li style="list-style-type:disc">Screened natural product libraries for potent inhibitors.</li></ul><ul id="74616967-73bd-4a7c-ad56-5eaadeb601f9" class="bulleted-list"><li style="list-style-type:disc">Analyzed structural preferences using GROMACS.</li></ul><h3 id="42a9b3d7-49c3-49b0-88b3-93492281f720" class="">The construction of a temperature-sensitive hydrogel sustained-release system | Mar 2022 - Jun 2023</h3><ul id="5971952f-e7a4-4ec5-8f1b-66be896b89ae" class="bulleted-list"><li style="list-style-type:disc">Utilized drug solubility and polymer properties for drug encapsulation.</li></ul><ul id="e3a8c853-170a-4776-b679-94990980f750" class="bulleted-list"><li style="list-style-type:disc">Achieved sustained release of poorly soluble drugs in injectable thermohydrogels.</li></ul><h3 id="5da7e4da-4ca8-43d2-8a73-d76fb9e3c120" class="">The discovery of small molecule-binding proteins in traditional Chinese medicine | Mar 2021 - Jun 2022</h3><ul id="70a7f29f-8a91-4ece-9186-cb366d6898d1" class="bulleted-list"><li style="list-style-type:disc">Built a molecular docking analysis platform for predicting molecular interactions.</li></ul><ul id="5cca73cc-0d61-4bd0-bfe5-247e3243016f" class="bulleted-list"><li style="list-style-type:disc">Improved the accuracy of network pharmacology.</li></ul><h1 id="e69e6903-3373-4e72-a672-21ac38afa2d8" class="">🎓 Education</h1><h3 id="97b44866-f715-4eef-a6b5-e246c9ef9fee" class="">Master of Science in Model Based Drug Development - <strong>University of Manchester,</strong> Manchester, United Kingdom | Starting Sep 2024</h3><p id="79a21bc9-a255-469e-9cb2-8c575ec7fc29" class="">
+</p><h3 id="69f07465-39fb-44fa-9cf8-175dbee84f6d" class="">Bachelor of Science in Pharmacy (International Collaboration with London Metropolitan University) - Shanghai University of Traditional Chinese Medicine, Shanghai, China | 2024</h3><ul id="7a2f1c6f-a100-4f44-b930-57a891e851de" class="bulleted-list"><li style="list-style-type:disc">Thesis: &quot;Interactivity and User Engagement in Digital Platforms&quot;</li></ul><p id="9c35cacc-199d-4263-ad67-7b2f82e38c1c" class="">
+</p><h3 id="fcc666e1-4a6c-4667-a66f-e1328becf630" class="">Research Supervisors:</h3><ul id="79811b88-70d6-4807-ba95-8958a5d142f2" class="bulleted-list"><li style="list-style-type:disc"><strong>Associate Professor Xiaoqing Guan</strong>, Institute of Interdisciplinary Integrative Medicine Research, Shanghai University of Traditional Chinese</li></ul><ul id="a5cfae7a-d89a-461e-886f-a5d87bedaa5c" class="bulleted-list"><li style="list-style-type:disc"><strong>Associate Professor Qingping Zhou</strong>, School of Mathematics and Statistics, Central South University</li></ul><h1 id="b7e830e6-29d0-44bc-bdbe-810902338f6d" class="">🚀 Current Research</h1><h3 id="3d1a946e-13bb-4919-a5a1-9d6e851a8e44" class="">AI for science</h3><ul id="d927463c-1bd3-493e-86ba-7a1d1e13b213" class="bulleted-list"><li style="list-style-type:disc">Artificial intelligence for drug-target Interaction </li></ul><ul id="8d6e5b9b-85af-466f-b42a-280fcff72463" class="bulleted-list"><li style="list-style-type:disc">Artificial intelligence for molecular property prediction</li></ul><h3 id="d70ae7a9-e84a-4976-ac41-8390948bb8e9" class="">Explainable AI</h3><ul id="3dc9a0d1-2470-429e-9e35-f9f1a4d87990" class="bulleted-list"><li style="list-style-type:disc">Uncertainty-guided artificial intelligence</li></ul><h3 id="7ce66267-fb5c-4ded-90bd-6e6b9b71de32" class="">PK/PD Modelling</h3><p id="a81d1603-9355-4867-b642-38dcc66c1ea5" class="">
+</p><h1 id="f20b3dd7-e306-48f5-9e50-b7a13b1c922b" class="">🔨 Skills</h1><h3 id="1eb2cfc9-a51c-425e-9bd2-aae5f6b6fdbe" class="">Languages: </h3><ul id="6fe6749c-b470-4292-b81a-a85f47105216" class="bulleted-list"><li style="list-style-type:disc">Mandarin Chinese (native)</li></ul><ul id="8e98c97f-8b0a-4aef-bb3e-0ab263b3536e" class="bulleted-list"><li style="list-style-type:disc">English (professional fluent)</li></ul><ul id="4ac3b36b-3647-4c49-b994-58c7ade45ff3" class="bulleted-list"><li style="list-style-type:disc">German (beginner)</li></ul><h3 id="2affa7d9-a9b0-4ace-ab59-8e2d255ef9fd" class="">Programming and Software: </h3><p id="ae6caf8f-c661-42eb-8663-239652409227" class="">Proficient in：</p><ul id="3c72d4d9-e378-4a53-ba0f-a9e588704ad4" class="bulleted-list"><li style="list-style-type:disc">MS Office Suite</li></ul><ul id="b40122fd-8801-4db0-b65b-47582cc16ce8" class="bulleted-list"><li style="list-style-type:disc">Python</li></ul><ul id="f749fe80-442d-457e-ba04-9a02bad4ee2b" class="bulleted-list"><li style="list-style-type:disc">R</li></ul><ul id="7e6593eb-2f06-4e63-9cc4-4277fb4e018c" class="bulleted-list"><li style="list-style-type:disc">bash</li></ul><ul id="2296afcb-e63c-40f6-a004-3a63b5e5bbec" class="bulleted-list"><li style="list-style-type:disc">Pytorch</li></ul><ul id="d659e0f1-0ecf-4a02-99cf-26f2dd882b40" class="bulleted-list"><li style="list-style-type:disc">Transformer</li></ul><ul id="c2bcbfd6-a5b6-478d-bb5d-aff7dcccc3e7" class="bulleted-list"><li style="list-style-type:disc">RDkit</li></ul><ul id="91a551c1-1f78-493a-9c1a-5389f8854b9d" class="bulleted-list"><li style="list-style-type:disc">Linux (Ubuntu and CentOS)</li></ul><ul id="a9f120c2-465a-478c-861c-08322595c11f" class="bulleted-list"><li style="list-style-type:disc">CUDA</li></ul><ul id="94ed47a5-f229-47a7-94d0-54c9909abed6" class="bulleted-list"><li style="list-style-type:disc">DGL-LifeSci</li></ul><ul id="dfb34ebf-6ed5-4f5b-be78-6a0212bd4096" class="bulleted-list"><li style="list-style-type:disc">Cytoscape</li></ul><ul id="aae1ab7f-5330-461d-b045-25c69a5b6e33" class="bulleted-list"><li style="list-style-type:disc">Discovery Studio 2019</li></ul><ul id="60863330-41f0-4736-95e2-e64af638cb4d" class="bulleted-list"><li style="list-style-type:disc">Gromacs</li></ul><h1 id="0ba9278f-0317-454e-a6e9-f5fbbbb1f4b2" class="">📬 Contact</h1><p id="ada82b61-9ac6-4f03-8c6c-88f2f4c184af" class="">Let&#x27;s create something amazing together! Reach out to me at:</p><ul id="aab9caf6-7dee-4c50-9f78-0d861835b036" class="bulleted-list"><li style="list-style-type:disc"><strong>Email:</strong> <a href="mailto:tangjunjiejerry@foxmail.com">tangjunjiejerry@foxmail.com</a>m</li></ul><ul id="2dd3c8fa-349a-49b4-bc48-77ab86181863" class="bulleted-list"><li style="list-style-type:disc">Github: <a href="https://github.com/AtropinolTT">https://github.com/AtropinolTT</a></li></ul><ul id="4accd8ec-b175-4970-8302-d938f828f2dc" class="bulleted-list"><li style="list-style-type:disc">ORCID: <a href="https://orcid.org/0009-0003-4804-0650">https://orcid.org/0009-0003-4804-0650</a></li></ul><p id="571c9e55-9a0f-402b-b037-794a9ac68877" class="">Thanks for stopping by my corner of the internet! 💫</p><p id="4368dcc9-736f-4ef2-a0b6-c815ca1ff729" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
